@@ -1,0 +1,94 @@
+<title>Body Fat Prediction!</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/main.css')}}">
+
+</head>
+<body>
+    <div class="container-contact100">
+      <div class="wrap-contact100">
+          <form class="contact100-form validate-form" method="POST">
+            <h2>
+                [노년층] Body Fat Predict Model
+            </h2>
+            <br>
+            <a href="http://nfa.kspo.or.kr/front/certify/cer0303_list.do"
+            title="국민체력 100 측정 동영상">측정 방법 동영상은 여기에 있습니다</a>.
+            <h5>▼ 아래에 측정 기록을 입력해주세요 ▼</h5>
+<br>
+
+                <form  method="POST">
+                    {# This hidden_tag is a CSRF security feature. #}
+                    {{ form.hidden_tag() }}
+
+                    <div class="wrap-input100 validate-input" data-validate="숫자만 입력해 주세요">
+                        <span class="label-input100">연령(age)</span>
+                        <input class="input100" type="number" name="test_age" placeholder="숫자만 입력해 주세요. (ex) 32" required/>
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <div class="select2-container--open" >
+                        <span class="label-input100" >성별(gender)</span> <br>
+                        <select name="test_sex" style="font-size : 18px; color : #767676; margin-top: 10px; background-color: transparent;
+                        border: none;" >
+                            <option value="1">남성(man)</option>
+                            <option value="0">여성(woman)</option>
+                        </select>
+                    </div>
+                    <br>
+
+                    <div class="wrap-input100 validate-input" data-validate="숫자만 입력해 주세요">
+                        <span class="label-input100">키 (cm)</span>
+                        <input class="input100" type="number" name="height" placeholder="숫자만 입력하세요 (ex)160" required/>
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate="숫자만 입력해 주세요">
+                        <span class="label-input100">몸무게 (kg)</span>
+                        <input class="input100" type="number" name="weight" placeholder="숫자만 입력해 주세요. (ex)60" required/>
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate="숫자만 입력해 주세요">
+                        <span class="label-input100">허리둘레 (cm)</span>
+                        <input class="input100" type="number" name="core_cm" placeholder="숫자만 입력해 주세요. (ex)80" required/>
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate="숫자만 입력해 주세요">
+                        <span class="label-input100">2분 제자리걷기 (회) </span>
+                        <input class="input100" type="number" name="walk2m" placeholder="숫자만 입력해 주세요. (ex)25" required/>
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate="숫자만 입력해 주세요">
+                        <span class="label-input100">의자 앉았다 일어서기 (30초 횟수) </span>
+                        <input class="input100" type="number" name="chairup" placeholder="숫자만 입력해 주세요. (ex)30" required/>
+                        <span class="focus-input100"></span>
+                    </div>
+                    <div class="wrap-input100 validate-input" data-validate="숫자만 입력해 주세요">
+                        <span class="label-input100">앉아윗몸앞으로굽히기 (cm) </span>
+                        <input class="input100" type="number" name="flex" placeholder="숫자만 입력해 주세요. (ex)30" required/>
+                        <span class="focus-input100"></span>
+                    </div>
+                    
+                    <div class="container-contact100-form-btn">
+                        <div class="wrap-contact100-form-btn">
+                            <div class="contact100-form-bgbtn"></div>
+                            <button  type = "submit" class="contact100-form-btn">
+                                    <span>
+                                        Submit
+                                        <i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+                                    </span>
+                            </button>
+                        </div>
+                </div>
+
+                </form>
+
+        </form>
+    </div>
+</div>
+
+</body>

@@ -1,0 +1,95 @@
+<title>Body Fat Prediction!</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/main.css')}}">
+
+<head>
+
+</head>
+
+<body>
+      <div class="container-contact100">
+		<div class="wrap-contact100">
+			<form class="contact100-form validate-form" method="POST">
+				<span class="contact100-form-title">
+                              Body Fat Prediction!
+                        </span>
+                        <h4>실내 또는 실외에서 측정한 기록으로 체지방을 예측합니다</h4>
+                        &nbsp
+                        <h5>▼ 아래에서 측정 유형을 선택해주세요 ▼</h5>
+                  <br>
+                  <form  method="POST" >
+                        {# This hidden_tag is a CSRF security feature. #}
+                        {{ form.hidden_tag() }}
+                        <div>
+                              <label for = 'model_type'>측정 유형 :</label>
+                              <!-- style="text-decoration:underline" -->
+                              <select name="model_type">
+                                    <option value="adult">성인</option>
+                                    <option value="elder">노년층</option>
+                                    <option value="youth">청소년</option>
+                                </select>
+                              <!-- <input placeholder="유형을 입력해주세요" type = "text" name = "model_type"></input> -->
+                              <pre>      </pre>
+                              
+                        </div>
+                        <!-- {{ form.model_type.label}} {{form.model_type}} -->
+
+                  
+                        <!-- <div class='button'>
+                              
+                              <button type="submit" style="color: #fff;background-color: rgb(28, 68, 41) ">&nbsp분석 페이지로 이동&nbsp</button>
+                          </div>
+                         -->
+
+                         
+                         <div class="container-contact100-form-btn">
+                              <div class="wrap-contact100-form-btn">
+                                    <div class="contact100-form-bgbtn"></div>
+                                    <button  type = "submit" class="contact100-form-btn">
+                                          <span>
+                                                Submit
+                                                <i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+                                          </span>
+                                    </button>
+                              </div>
+                        </div>
+                        
+                  </form>
+                  </form>
+            </div>
+      </div>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script> -->
+
+
+</body>
+
+<!-- 
+<div class="wrap-input100 validate-input" data-validate="Name is required">
+      <span class="label-input100">Your Name</span>
+      <input class="input100" type="text" name="name" placeholder="Enter your name">
+      <span class="focus-input100"></span>
+</div>
+
+<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+      <span class="label-input100">Email</span>
+      <input class="input100" type="text" name="email" placeholder="Enter your email addess">
+      <span class="focus-input100"></span>
+</div>
+
+
+<div class="wrap-input100 validate-input" data-validate = "Message is required">
+      <span class="label-input100">Message</span>
+      <textarea class="input100" name="message" placeholder="Your message here..."></textarea>
+      <span class="focus-input100"></span>
+</div> -->
